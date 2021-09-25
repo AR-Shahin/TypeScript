@@ -46,8 +46,24 @@ const manyNumber = (...args : number[]) : number=> {
 
 // log(manyNumber(1,2,3))
 
-let st1 = new Student('Shahin','aa','s@mail.com',101);
-log(st1.getEmail())
-st1.authenticate();
-st1.mail(st1.getEmail());
-log(Student.test)
+// let st1 = new Student('Shahin','aa','s@mail.com',101);
+// log(st1.getEmail())
+// st1.authenticate();
+// st1.mail(st1.getEmail());
+// log(Student.test)
+
+
+interface A {
+    email : string
+}
+
+interface B {
+    name : string
+}
+
+type combineAB = A & B;
+
+let obj : combineAB = {
+    name:'shahin',
+    email : 's@mail.com',
+}
